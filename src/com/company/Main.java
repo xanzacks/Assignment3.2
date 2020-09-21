@@ -1,5 +1,5 @@
 package com.company;
-
+//E6.5
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -7,11 +7,11 @@ public class Main {
     public static class PrimeGenerator{
         ArrayList<Integer> myList = new ArrayList<Integer>(0);
         PrimeGenerator(int num){
-            if(num < 2){
+            if(num < 2){//if less than two number, output none and exit
                 System.out.println("There is none...");
                 System.exit(2);
             }
-            else{
+            else{//keep adding numbers
                 int next = 1;
                 while(nextprime(next) <= num){
                     myList.add(nextprime(next));
@@ -19,7 +19,7 @@ public class Main {
                 }
             }
         }
-        boolean isprime(int number){
+        boolean isprime(int number){//judge if prime
             if(number < 2){
                 return false;
             }
@@ -30,7 +30,7 @@ public class Main {
             }
             return true;
         }
-        int nextprime(int prePrime){
+        int nextprime(int prePrime){//return next prime until int limit
             for (int i = prePrime + 1; i <= 2147483647; i++){
                 if(isprime(i)){
                     return i;
@@ -38,7 +38,7 @@ public class Main {
             }
             return 0;
         }
-        void output(){
+        void output(){//output all
             for(Integer i: myList){
                 System.out.print(i + " ");
             }
