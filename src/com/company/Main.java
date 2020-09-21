@@ -46,6 +46,7 @@ public class Main {
     }
     public static void main(String[] args) {
         Scanner myinput = new Scanner(System.in);
+        System.out.println("Please input an integer as boundary");
         int num = myinput.nextInt();
         PrimeGenerator myobj = new PrimeGenerator(num);
         myobj.output();
